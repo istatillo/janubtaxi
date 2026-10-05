@@ -1,0 +1,44 @@
+---
+const faqs = [
+  {
+    q: "Mashina chaqirish qancha vaqt oladi?",
+    a: "O'rtacha yetib kelish vaqti shahar ichida 10–15 daqiqa. Bot har doim eng yaqin bo'sh haydovchini tanlaydi, shuning uchun kutilish vaqti maksimal qisqa bo'ladi.",
+  },
+  {
+    q: "Narx qanday hisoblanadi?",
+    a: "Narx yo'nalish, masofa va mashina turiga qarab belgilanadi va buyurtmani tasdiqlashdan OLDIN botda to'liq ko'rsatiladi. Safar davomida narx oshmaydi — qat'iy kelishilgan summa saqlanadi.",
+  },
+  {
+    q: "Qanday to'lov usullari mavjud?",
+    a: "Naqd pul bilan haydovchiga to'lash yoki O'zbekistondagi barcha keng tarqalgan to'lov tizimlari orqali bot ichida to'lash mumkin. Korporativ mijozlar uchun hisob-faktura bilan oylik hisob-kitob mavjud.",
+  },
+  {
+    q: "Kechasi va bayram kunlari ham ishlayapsizlarmi?",
+    a: "Ha, Janub Taxi 24/7 — haftaning yetti kuni, kunu tun ishlaydi. Tungi va bayram tariflari oldindan botda ko'rsatiladi, shuning uchun hech qanday yashirin to'lov yo'q.",
+  },
+  {
+    q: "Shaharlararo safar uchun oldindan band qilish mumkinmi?",
+    a: "Albatta. Botda sanani va vaqtni belgilab, viloyatlararo safarni bir necha kun oldin band qilishingiz mumkin. Haydovchi kelishilgan vaqtda manzilda bo'ladi.",
+  },
+  {
+    q: "Aeroportga yetib borish kafolatlanadimi?",
+    a: "Transfer buyurtmasida reysingiz raqamini ko'rsating — haydovchi reys holatini kuzatadi va kechikishga mos ravishda vaqtini sozlaydi. Shuningdek, kutish va qo'shimcha to'lovlarsiz kutib olish xizmati mavjud.",
+  },
+];
+---
+<section id="faq" class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Savol-javoblar</span>
+      <h2>Ko'p so'raladigan <span class="accent">savollar</span></h2>
+    </div>
+    <div class="faq-list reveal">
+      {faqs.map((item) => (
+        <details>
+          <summary>{item.q}</summary>
+          <p>{item.a}</p>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>

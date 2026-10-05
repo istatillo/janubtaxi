@@ -1,0 +1,37 @@
+---
+const steps = [
+  {
+    num: "01",
+    title: "Botni oching",
+    text: "Telegramda @janubtaxibot ni oching va «Mashina chaqirish» tugmasini bosing. Ro'yxatdan o'tish shart emas — birinchi bosqichdan boshlayapsiz.",
+  },
+  {
+    num: "02",
+    title: "Manzilni ko'rsating",
+    text: "Qayerdan va qayerga borishingizni yozing yoki geolokatsiya yuboring. Bot darhol aniq narxni hisoblab, yaqin haydovchini topadi.",
+  },
+  {
+    num: "03",
+    title: "Haydovchini kuting",
+    text: "Haydovchi ma'lumotlari va mashina raqami botda ko'rinadi. Haydovchi kelganda yo'lga chiqing — to'lov safar oxirida qulay usulda.",
+  },
+];
+---
+<section id="qanday-ishlaydi" class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Jarayon</span>
+      <h2>Mashina chaqirish — <span class="accent">3 oddiy qadam</span></h2>
+      <p>Ilova o'rnatish, ro'yxatdan o'tish va uzoq kutilishlar kerak emas. Butun jarayon Telegram ichida bir necha soniyada yakunlanadi.</p>
+    </div>
+    <div class="grid grid-3">
+      {steps.map((step) => (
+        <article class="card reveal">
+          <div class="step-num">{step.num}</div>
+          <h3>{step.title}</h3>
+          <p>{step.text}</p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

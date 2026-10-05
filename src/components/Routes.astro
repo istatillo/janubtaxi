@@ -1,0 +1,33 @@
+---
+const routes = [
+  { from: "Toshkent markazi", to: "Toshkent aeroporti (TAS)", price: "25 000" },
+  { from: "Toshkent", to: "Samarqand", price: "350 000" },
+  { from: "Toshkent", to: "Buxoro", price: "600 000" },
+  { from: "Samarqand", to: "Buxoro", price: "400 000" },
+  { from: "Toshkent", to: "Farg'ona", price: "300 000" },
+  { from: "Toshkent", to: "Andijon", price: "400 000" },
+  { from: "Samarqand", to: "Qarshi", price: "220 000" },
+  { from: "Toshkent", to: "Nukus", price: "900 000" },
+];
+---
+<section id="yonalishlar" class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Mashhur yo'nalishlar</span>
+      <h2>Aniq narxlar — <span class="accent">yo'lda surpriz yo'q</span></h2>
+      <p>Eng ko'p so'raladigan yo'nalishlar va ularning taxminiy narxlari. Yakuniy narx buyurtma paytida botda ko'rsatiladi va o'zgarmaydi.</p>
+    </div>
+    <div class="grid grid-2">
+      {routes.map((route) => (
+        <div class="card route-row reveal">
+          <div>
+            <div class="route-name">{route.from} → {route.to}</div>
+            <div class="route-meta">Qulay mashina, qo'shimcha to'lovlarsiz</div>
+          </div>
+          <div class="route-price">dan {route.price} so'm</div>
+        </div>
+      ))}
+    </div>
+    <p class="price-note reveal">* Barcha narxlar "dan boshlab" ko'rsatilgan va yo'nalish, masofa va mashina turiga qarab farq qilishi mumkin.</p>
+  </div>
+</section>

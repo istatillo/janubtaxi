@@ -1,0 +1,15 @@
+{
+  "name": "janubtaxi",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Janub Taxi — O'zbekiston bo'ylab tez, arzon va ishonchli taksi xizmati",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "^3.2.1",
+    "astro": "^5.0.0"
+  }
+}

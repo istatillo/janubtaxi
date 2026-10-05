@@ -1,0 +1,67 @@
+---
+interface Props {
+  title: string;
+  description: string;
+}
+
+import '../styles/global.css';
+
+const { title, description } = Astro.props;
+const canonical = new URL(Astro.url.pathname, 'https://janubtaxi.uz');
+---
+<!doctype html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <meta name="theme-color" content="#0B0B0F" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Janub Taxi" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content="https://janubtaxi.uz/og-image.png" />
+    <meta property="og:locale" content="uz_UZ" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content="https://janubtaxi.uz/og-image.png" />
+
+    <!-- Icons / manifest -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+
+    <!-- JSON-LD -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "TaxiService",
+        "name": "Janub Taxi",
+        "url": "https://janubtaxi.uz",
+        "telephone": "+998910004455",
+        "priceRange": "$$",
+        "areaServed": "Uzbekistan",
+        "image": "https://janubtaxi.uz/og-image.png",
+        "sameAs": [
+          "https://www.instagram.com/janubtaxi",
+          "https://t.me/janubtaxi",
+          "https://t.me/janubtaxibot"
+        ]
+      }
+    </script>
+    <script is:inline>
+      document.documentElement.classList.add('js');
+    </script>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

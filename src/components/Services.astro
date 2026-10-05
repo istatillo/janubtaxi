@@ -1,0 +1,54 @@
+---
+const services = [
+  {
+    title: "Shahar ichida taksi",
+    text: "Qayerdan qayerga bo'lishidan qat'i nazar — yaqin oraliqda bo'lgan haydovchi bir necha daqiqada sizning manzilingizga yetib keladi.",
+    icon: '<path d="M5 11l1.5-4.5A2 2 0 0 1 8.4 5h7.2a2 2 0 0 1 1.9 1.5L19 11m-14 0h14a2 2 0 0 1 2 2v3h-2m-14 0H3v-3a2 2 0 0 1 2-2Zm2 5a2 2 0 1 0 4 0m6 0a2 2 0 1 0 4 0"/>',
+  },
+  {
+    title: "Shaharlararo safar",
+    text: "Viloyatlar va shaharlarga qulay va xavfsiz safarlar. Narx oldindon kelishiladi — yo'lda hech qanday surpriz yo'q.",
+    icon: '<path d="M9 20 3 17V4l6 3m0 13 6-3m-6 3V7m6 10 6 3V7l-6-3m0 13V4M9 7 3 4m18 3-6-3"/>',
+  },
+  {
+    title: "Aeroport transfer",
+    text: "Toshkent aeroportiga va undan qaytish uchun aniq vaqtli transfer. Reys kechiksa — haydovchi kutadi, qo'shimcha to'lov yo'q.",
+    icon: '<path d="M2 16h20l-1.5-6L14 7l-2-3-2 3-6.5 3L2 16Zm0 0v4m20-4v4M7 20h10"/>',
+  },
+  {
+    title: "Yuk tashish",
+    text: "Kichik yuklar, buyurtmalar va buyumlar uchun tezkor yetkazib berish. Katta yuk uchun kengaytirilgan bagajli mashinalar mavjud.",
+    icon: '<path d="M3 7h11v10H3zM14 10h4l3 3v4h-7M6 20a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm11 0a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/>',
+  },
+  {
+    title: "Korporativ xizmat",
+    text: "Kompaniyalar uchun doimiy hamkorlik: hisob-faktura, qat'iy jadval va individual tariflar. Xodimlaringiz har doim vaqtida bo'ladi.",
+    icon: '<path d="M3 21h18M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16M9 7h1m4 0h1M9 11h1m4 0h1M9 15h1m4 0h1"/>',
+  },
+  {
+    title: "24/7 xizmat",
+    text: "Tun yoki kunduzi, bayram yoki oddiy ish kuni — Janub Taxi har doim aloqada. Operatorlar va haydovchilar 24 soat xizmatingizda.",
+    icon: '<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/>',
+  },
+];
+---
+<section id="xizmatlar" class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Xizmatlar</span>
+      <h2>Har qanday vaziyat uchun <span class="accent">tayyor yechim</span></h2>
+      <p>Oddiy shahar safaridan tortib viloyatlararo yo'llargacha — barcha yo'nalishlar va ehtiyojlar uchun professional taksi xizmati.</p>
+    </div>
+    <div class="grid grid-3">
+      {services.map((service) => (
+        <article class="card reveal">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" set:html={service.icon} />
+          </div>
+          <h3>{service.title}</h3>
+          <p>{service.text}</p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

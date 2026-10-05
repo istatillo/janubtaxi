@@ -1,0 +1,40 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import Services from '../components/Services.astro';
+import Routes from '../components/Routes.astro';
+import HowItWorks from '../components/HowItWorks.astro';
+import AppCta from '../components/AppCta.astro';
+import Faq from '../components/Faq.astro';
+import Footer from '../components/Footer.astro';
+
+const title = 'Janub Taxi — O\'zbekistonda tez, arzon va ishonchli taksi';
+const description = 'Janub Taxi — Telegram bot orqali bir necha soniyada mashina chaqiring. Shahar ichida va shaharlararo safarlar, aeroport transfer, yuk tashish. 24/7 xizmat, aniq narxlar. +998 91 000 44 55';
+---
+<Layout title={title} description={description}>
+  <Header />
+  <main>
+    <Hero />
+    <Services />
+    <Routes />
+    <HowItWorks />
+    <AppCta />
+    <Faq />
+  </main>
+  <Footer />
+  <script>
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12 }
+    );
+    document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+  </script>
+</Layout>
