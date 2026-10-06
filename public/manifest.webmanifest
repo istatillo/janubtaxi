@@ -1,7 +1,7 @@
 {
   "name": "Janub Taxi",
   "short_name": "Janub Taxi",
-  "description": "O'zbekiston bo'ylab tez, arzon va ishonchli taksi xizmati",
+  "description": "Bandixon tumani bo'ylab tez, ishonchli va adolatli taksi xizmati",
   "lang": "uz",
   "start_url": "/",
   "display": "standalone",

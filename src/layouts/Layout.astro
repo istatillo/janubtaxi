@@ -35,7 +35,7 @@ const canonical = new URL(Astro.url.pathname, 'https://janubtaxi.uz');
     <meta name="twitter:image" content="https://janubtaxi.uz/og-image.png" />
 
     <!-- Icons / manifest -->
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/manifest.webmanifest" />
 
@@ -48,7 +48,18 @@ const canonical = new URL(Astro.url.pathname, 'https://janubtaxi.uz');
         "url": "https://janubtaxi.uz",
         "telephone": "+998910004455",
         "priceRange": "$$",
-        "areaServed": "Uzbekistan",
+        "areaServed": "Bandixon tumani, Surxondaryo viloyati",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Bandixon",
+          "addressRegion": "Surxondaryo",
+          "addressCountry": "UZ"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 37.8608,
+          "longitude": 67.3883
+        },
         "image": "https://janubtaxi.uz/og-image.png",
         "sameAs": [
           "https://www.instagram.com/janubtaxi",
